@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login +registration+grid card</title>
+    <style>
+            .divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>    
+</head>
+<body>
+    <nav class="navbar bg-danger border-bottom border-bottom-dark" data-bs-theme="dark">
+        <!-- Navbar content -->
+      </nav>
+      
+      <nav class="navbar bg-primary" data-bs-theme="dark">
+        <!-- Navbar content -->
+      </nav>
+      
+      <nav class="navbar" style="background-color: #e3f2fd;">
+        <!-- Navbar content -->
+      </nav>
+
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Container wrapper -->
+    <div class="container">
+      <!-- Navbar brand -->
+      <a class="navbar-brand me-2" href="">
+        <img
+          src="data:image/png;base64,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"
+          height="16"
+          alt="MDB Logo"
+          loading="lazy"
+          style="margin-top: -1px;"
+        />
+      </a>
+  
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarButtonsExample"
+        aria-controls="navbarButtonsExample"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+  
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarButtonsExample">
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">ResortBooking.com</a>
+          </li>
+        </ul>
+        <!-- Left links -->
+  
+        <div class="d-flex align-items-center">
+          <a href="./login-bootstrap.html"> <button type="button" class="btn btn-light px-3 me-2">
+            Login
+          </button></a>
+          <a href="./reg-bootsrap.html"></a><button type="button" class="btn btn-light me-3">
+            Sign up for free
+          </button></a>
+          <a
+            class="btn btn-dark px-3"
+            href="https://github.com/mdbootstrap/mdb-ui-kit"
+            role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
+      <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+    
+
+ 
+  <section class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="https://img.freepik.com/free-vector/flat-man-hotel-booking-background_23-2148136539.jpg?w=740&t=st=1689275389~exp=1689275989~hmac=c6a5e91770ce65493bbc2f4092cf2841eb60f2c4a95de385ba450a5a49d19783"
+            class="img-fluid" alt="Sample image">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+          <form>
+            <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+              <p class="lead fw-normal mb-0 me-3">Sign Up Now</p>
+              <button type="button" class="btn btn-primary btn-floating mx-1">
+                <i class="fab fa-facebook-f"></i>
+              </button>
+  
+              <button type="button" class="btn btn-primary btn-floating mx-1">
+                <i class="fab fa-twitter"></i>
+              </button>
+  
+              <button type="button" class="btn btn-primary btn-floating mx-">
+                <i class="fab fa-linkedin-in p"></i>
+              </button>
+            </div>
+  
+            <div class="divider d-flex align-items-center my-4">
+              <p class="text-center fw-bold mx-3 mb-0">SIGN UP</p>
+            </div>
+  
+            <!-- sdfgh
+             -->
+            
+             <!-- Email input -->
+            <div class="form-outline mb-6">
+                <input type="email" id="form3Example3" class="form-control form-control-lg"
+                  placeholder="Enter First Name" />
+                <label class="form-label" for="form3Example3">First Name</label>
+              </div>
+              <!-- Email input -->
+            <div class="form-outline mb-6">
+                <input type="email" id="form3Example3" class="form-control form-control-lg"
+                  placeholder="enter Last Name" />
+                <label class="form-label" for="form3Example3">Last Name</label>
+              </div>
+            
+            
+            
+            
+            
+            
+            <!-- Email input -->
+            <div class="form-outline mb-6">
+              <input type="email" id="form3Example3" class="form-control form-control-lg"
+                placeholder="Enter a valid email address" />
+              <label class="form-label" for="form3Example3">Email address</label>
+            </div>
+
+  
+            <!-- Password input -->
+            <div class="form-outline mb-3">
+              <input type="password" id="form3Example4" class="form-control form-control-lg"
+                placeholder="Enter password" />
+              <label class="form-label" for="form3Example4">Password</label>
+            </div>
+            <!-- Email input -->
+            <div class="form-outline mb-6">
+                
+              
+                <label class="form-label" for="form3Example3" >gender</label>
+                <select name="" id="" class="form-control form-control-lg">
+                    <option>male</option>
+                    <option>female</option>
+                    
+                </select>
+
+              </div>
+  
+            <div class="d-flex justify-content-between align-items-center">
+              <!-- Checkbox -->
+              <!-- <div class="form-check mb-0">
+                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                <label class="form-check-label" for="form2Example3">
+                  Remember me
+                </label>
+              </div> -->
+              <!-- <a href="#!" class="text-body">Forgot password?</a> -->
+            </div>
+  
+            <div class="text-center text-lg-start mt-3 pt-1">
+              <button type="button" class="btn btn-primary btn-lg"
+                style="padding-left: 2.5rem; padding-right: 2.5rem;">Register</button>
+              <p class="small fw-bold mt-2 pt-1 mb-0">  Alraedy Have an account? <a href="#!"
+                  class="link-danger">login</a></p>
+            </div>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+    <div
+      class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+      <!-- Copyright -->
+      <div class="text-white mb-3 mb-md-0">
+        Copyright © 2020. All rights reserved.
+      </div>
+      <!-- Copyright -->
+  
+      <!-- Right -->
+      <div>
+        <a href="#!" class="text-white me-4">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#!" class="text-white me-4">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#!" class="text-white me-4">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="#!" class="text-white">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </div>
+  </section>
+
+
+</body>
+</html>
